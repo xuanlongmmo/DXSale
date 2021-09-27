@@ -1,0 +1,184 @@
+
+.daoxfee__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 80px;
+}
+
+.daoxfee__list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 14%;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.daoxfee__list-item-text {
+    font-size: 1.2rem;
+    color: var(--white-color);
+}
+
+.daoxfee__details {
+   margin: 60px 0 60px 0;
+}
+
+.daoxfee__details-form {
+    display: flex;
+    justify-content: center;
+}
+
+.daoxfee__details-form-group {
+    flex-basis: 60%;
+}
+
+.daoxfee__details-nav {
+    margin-bottom: 0;
+}
+
+.daoxfee__details-item {
+    padding-bottom: 20px;
+}
+
+.daoxfee__details-title {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 1.28rem;
+    padding-top: 20px;
+}
+
+.daoxfee__details-desc {
+    text-align: center;
+    font-size: 1.28rem;
+}
+
+.daoxfee__details-desc-hot {
+    color: red;
+}
+
+.daoxfee__details-desc-blu {
+    color: var(--primary__color);
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.daoxfee__details-btn-block {
+    display: flex;
+    justify-content: center;
+}
+
+.daoxfee__details-btn {
+
+}
+
+.daoxfee__details-time-block {
+    font-size: 1.28rem;
+    margin-top: 20px;
+}
+
+.daoxfee__details-time-title {
+    text-align: center;
+}
+
+.daoxfee__details-time {
+    text-align: center;
+}
+
+/* dao ETH  */
+.daoxeth-block {
+
+}
+
+.daoxeth {
+    padding: 0 80px;
+}
+
+.daoxeth__i4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.daoxeth__i4-img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.daoxeth__i4-title {
+    font-size: 1.6rem;
+    font-weight: 450;
+}
+
+.daoxeth__details {
+    padding-bottom: 200px;
+}
+
+.daoxeth__details-title {
+    font-size: 1.12rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.daoxeth__details-desc {
+    color: red;
+    font-size: 1.6rem;
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+.DxFarilxDash__active.DxFarilxDash__active--mb {
+    display: none;
+}
+
+
+@media screen and (max-width: 64em){
+    .daoxfee__list-item {
+        /* width: 120px; */
+    }
+}
+
+@media screen and (max-width: 63.938em) {
+    .daoxfee__list {
+        padding: 0 100px;
+    }
+
+    .daoxfee__list-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .daoxfee__details-form-group {
+        flex-basis: 90%;
+    }
+}
+
+@media screen and (min-width: 46.250em) and (max-width: 63.938em){
+
+}
+
+@media screen and (max-width: 46.188em) {
+    .DxFarilxDash__active.DxFarilxDash__active--pc {
+        display: none;
+    }
+
+    .DxFarilxDash__active.DxFarilxDash__active--mb {
+        display: flex;
+        padding: 5px 0;
+    }     
+
+    .daoxfee__list {
+        padding: 0 60px;
+    }
+    
+    .daoxeth-block {
+        padding: 0 20px;
+    }
+}

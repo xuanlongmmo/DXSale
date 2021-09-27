@@ -1,0 +1,239 @@
+
+.home__content {
+    background-color: #FAFAFA;
+    min-height: 100vh;
+    flex: 1;
+    padding-top: 50px;
+    padding-left: 240px;
+}
+
+.home__content.compact {
+    padding-left: 60px;
+}
+
+.home__content-body {
+    margin-top: 30px;
+}
+
+.home__content-body.mt30 {
+    margin-top: 30px;
+}
+
+.home__content-body-box-block {
+    display: flex;
+    padding: 8px;
+}
+
+.home__content-body-box {
+    margin: auto;
+    border-radius: 50px;
+    padding: 20px 50px;
+    text-align: center;
+    height: 190px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: space-between;
+    box-shadow: -2px 3px 6px rgb(163, 162, 162);
+    position: relative;
+    overflow: hidden;
+}
+
+.home__content-body-box:hover {
+    transform: scale(1.02);
+}
+
+.home__content-body-box--diss {
+    color: var(--black__color);
+}
+
+.home__content-body-box--diss:hover {
+    transform: scale(1);
+}
+
+
+.home__content-body-box::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -30px;
+    width: 3000px;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.2);
+    animation: show__ball 0.3s ease-in-out;
+    display: none;
+}
+
+.home__content-body-box:hover.home__content-body-box::before {
+    display: inline-block;
+}
+
+h2.home__content-body-box-title {
+    font-size: 1.76rem;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+h3.home__content-body-box-desc {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 9px 0;
+    margin-bottom: 9px;
+}
+
+h3.home__content-body-box-text {
+    font-size: 1.76rem;
+    font-weight: bold;
+}
+
+.home__content-body-box-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.home__content-body-box-item svg{
+    margin-bottom: 0px;
+}
+
+h4.home__content-body-box-item-desc {
+    font-weight: bold;
+    font-size: 1.28rem;
+}
+
+h2.home__content-body-box-item-number {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.slider__modal__overlay {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+@media (min-width: 1250px){
+    .home__content-body-box {
+        width: 55%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width:1249px){
+    .home__content-body-box {
+        width: 55%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home__content-body-box {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .home__content-body-box {
+        width: 70%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+    .home__content-body-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 599px) {
+    .home__content-body-box {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 64em){
+    /* nav slider  */
+    .home__nav-block-pc {
+        display: none;
+    }
+
+    .home__nav-block-mb {
+        display: block;
+    }
+
+    .home__content {
+        padding-left: 0;
+    }
+
+    .home__content-header {
+        /* justify-content: flex-start; */
+    }
+
+    .home__nav-control {
+        display: none;
+    }
+
+    .home__nav-control.home__nav-control--modal {
+        display: flex;
+        left: 10px;
+    }
+
+    .home__nav {
+        display: none;
+    }
+    
+    .slider__modal:checked ~ .modal {
+        display: flex;
+    }
+    
+    .slider__modal:checked ~ .home__nav-control.home__nav-control--modal {
+        display: none;
+    }
+
+    .slider__modal:checked ~ .modal .modal__overlay {
+        display: block;
+    }
+
+    .slider__modal:checked ~ .modal .modal__body .home__nav.home__nav-overlay {
+        display: block;
+        width: 240px;
+        animation: widthSlider linear 0.3s;
+    }
+
+    .slider__modal:checked ~ .modal, 
+    .slider__modal:checked ~ .modal .modal__overlay{
+        animation: fadeIn ease-in 0.3s;
+    }
+
+    /* home  */
+    h2.home__content-body-box-title {
+        font-size: 1.6rem;
+    }
+
+    h3.home__content-body-box-desc {
+        font-size: 1.12rem;
+    }
+
+    h4.home__content-body-box-item-desc {
+        font-size: 1.12rem;
+    }
+}
+
+@media screen and (min-width: 46.250em) and (max-width: 63.938em){
+    .home__content-header {
+        justify-content: flex-start;
+        padding-left: 70px;
+    }
+    
+}
+
+@media screen and (max-width: 46.188em) {
+    .home__content-header {
+        justify-content: flex-start;
+        padding-left: 70px;
+    }
+
+    .home__content-body-box {
+        padding: 10px 0 0 0;
+    }
+
+    h2.home__content-body-box-title {
+        padding-top: 20px;
+    }
+}
