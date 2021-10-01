@@ -15,7 +15,7 @@
     align-items: center;
     min-height: 56px;
     border-radius: 8px;
-    margin: 0 0px 25px 0px;
+    margin: 0 20px 25px 20px;
 }
 
 .DxFarilxDash__active.flex-column {
@@ -26,6 +26,11 @@
 
 .DxFarilxDash__active.flex-column .DxFarilxDash__active-btn.mb {
     margin-bottom: 20px;
+}
+
+.DxFarilxDash__box__list {
+    display: flex;
+    
 }
 
 /* find  */
@@ -179,6 +184,8 @@ h2.DxFarilxDash__find-header-text {
 .DxFarilxDash__box-header-avt-img {
     height: 55px;
     width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .DxFarilxDash__box-header-desc {
@@ -544,7 +551,7 @@ h2.DxFarilxDash__box-header-desc-name.blu-hot-h2 {
 
 .DxFarilxDash__details-hr {
     height: 24px;
-    margin: 0 10px;
+    margin: 0px 20px;
 }
 
 .DxFarilxDash__box-left {
@@ -658,7 +665,7 @@ h2.DxFarilxDash__box-header-desc-name.blu-hot-h2 {
 }
 
 .DxFairlxDash__box-bet-item--mbm {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 h2.DxFairlxDash__box-bet-item-name {

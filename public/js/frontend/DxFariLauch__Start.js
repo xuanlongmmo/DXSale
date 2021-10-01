@@ -229,7 +229,7 @@ function show__table() {
         return false;
     }
 
-    checkdate('lock', lock, start);
+    checkdate('lock', lock, end);
     if (checktimeok('lock') == false) {
         return false;   
     }
@@ -246,4 +246,41 @@ function checktimeok(val) {
     }
 
     return true;
+}
+
+function setvalue(e) {
+    var id = e.id;
+    var input = $('#'+id).val();
+    if (id == 'start' || id == 'end' || id == 'lock') {
+        var val = $('#'+id).val();
+        converttime(id, val);
+    } else {
+        $('#value_'+id).html(input);
+    }
+}
+
+function converttime(id, value) {
+    $(document).ready(function(){
+        $.ajax({
+            url:"converttime",
+            method:'get',
+            data: {
+                value:value,
+            },
+            success: function(data){
+                $('#value_'+id).html(data);
+            },
+        });
+    });
+}
+
+function openfinish() {
+    var show__table = document.getElementById('show__table');
+    if (show__table.style.display == 'none') {
+        show__table.style.display = 'block';
+        $('#DxFarilxStart__import__8__son').addClass('none');
+    } else {
+        show__table.style.display = 'none';
+        $('#DxFarilxStart__import__8__son').addClass('block');
+    }
 }

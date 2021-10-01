@@ -81,40 +81,63 @@
                     <div class="inner">inner</div>
                 </div>
             </div> -->
-            <div class="DxFarilxDash__box bsd col-3">
-                <div class="DxFarilxDash__box-header">
-                    <div class="DxFarilxDash__box-header-avt">
-                        <img class="DxFarilxDash__box-header-avt-img" src="https://i.ibb.co/HqRhtDq/logo-Placeholder.png" alt="">
+            
+            <div class="DxFarilxDash__box__list row">
+                @foreach ($dx as $item)
+                    <div class="DxFarilxDash__box-block col-3">
+                        <div class="DxFarilxDash__box bsd">
+                            <div class="DxFarilxDash__box-header">
+                                <div class="DxFarilxDash__box-header-avt">
+                                    <img class="DxFarilxDash__box-header-avt-img" src="{{ $item->infor->logo_link }}" alt="">
+                                </div>
+                                <div class="DxFarilxDash__box-header-desc">
+                                    <h2 class="DxFarilxDash__box-header-desc-name blu-hot-h2">TST</h2>
+                                    <h2 class="DxFarilxDash__box-header-desc-name">Tester</h2>
+                                </div>
+                            </div>
+                            <label onclick="modal__ac(this)" for="modal__box" id="box__body__{{ $item->id }}" class="DxFarilxDash__box-body">
+                                <div class="DxFarilxDash__box-body-stt-block">
+                                    <canvas id="myChart__dxl__d{{ $item->id }}" width="180" height="180"></canvas>
+                                    <div id="stt__btn" class="DxFarilxDash__box-body-stt-btn btn">Launch Success</div>
+                                </div>
+                                <div class="DxFarilxDash__box-body-details">
+                                    <span class="DxFarilxDash__box-body-details-hot">Raised: 0/{{ $item->soft }}</span>
+                                    <span class="DxFarilxDash__box-body-details-number">Soft Cap: {{ $item->hard }} ETH</span>
+                                    <span class="DxFarilxDash__box-body-details-number">Min: {{ $item->min }} Max: {{ $item->min }}</span>
+                                    <span class="DxFarilxDash__box-body-details-stt">✅ DxMint Verified</span>
+                                </div>
+                            </label>                   
+                            <div class="DxFarilxDash__box-footer">
+                                <div class="DxFarilxDash__box-footer-icon">
+                                    <i class="fal fa-star"></i>
+                                </div>
+                                <?php $date = date('Y-m-d\TH:i'); ?>
+                                @if (strtotime($item->start) - strtotime($date) > 0)
+                                    <span class="DxFarilxDash__box-footer-text">
+                                        Sale Start in: <br>
+                                        <span id="h_string">1</span>:
+                                        <span id="m_string">20</span>:
+                                        <span id="s_string">34</span>
+                                    </span>   
+                                @elseif (strtotime($item->end) - strtotime($date) > 0)
+                                    <span class="DxFarilxDash__box-footer-text">
+                                        Sale End in: <br>
+                                        <span id="h_string">3</span>:
+                                        <span id="m_string">21</span>:
+                                        <span id="s_string">32</span>
+                                    </span>
+                                @else
+                                    <span class="DxFarilxDash__box-footer-text">Presale<br>Ended</span>
+                                @endif                             
+                                <a href="" class="DxFarilxDash__box-footer-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M6.25 4.75a1.5 1.5 0 0 0-1.5 1.5v11.5a1.5 1.5 0 0 0 1.5 1.5h11.5a1.5 1.5 0 0 0 1.5-1.5v-4a1 1 0 1 1 2 0v4a3.5 3.5 0 0 1-3.5 3.5H6.25a3.5 3.5 0 0 1-3.5-3.5V6.25a3.5 3.5 0 0 1 3.5-3.5h4a1 1 0 1 1 0 2h-4zm6.5-1a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v6.5a1 1 0 1 1-2 0V6.164l-4.793 4.793a1 1 0 1 1-1.414-1.414l4.793-4.793H13.75a1 1 0 0 1-1-1z" fill="currentColor"></path></g></svg>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="DxFarilxDash__box-header-desc">
-                        <h2 class="DxFarilxDash__box-header-desc-name blu-hot-h2">TST</h2>
-                        <h2 class="DxFarilxDash__box-header-desc-name">Tester</h2>
-                    </div>
-                </div>
-                <label onclick="modal__ac()" for="modal__box" id="box__body" class="DxFarilxDash__box-body">
-                    <div class="DxFarilxDash__box-body-stt-block">
-                        <canvas id="myChart__dxl__d" width="180" height="180"></canvas>
-                        <div id="stt__btn" class="DxFarilxDash__box-body-stt-btn btn">Launch Success</div>
-                    </div>
-                    <div class="DxFarilxDash__box-body-details">
-                        <span class="DxFarilxDash__box-body-details-hot">Token %: 100</span>
-                        <span class="DxFarilxDash__box-body-details-number">Liquidity: 0.01 ETH</span>
-                        <span class="DxFarilxDash__box-body-details-stt">✅ DxMint Verified</span>
-                    </div>
-                </label>
-                
-                <div class="DxFarilxDash__box-footer">
-                    <div class="DxFarilxDash__box-footer-icon">
-                        <i class="fal fa-star"></i>
-                    </div>
-                    <span class="DxFarilxDash__box-footer-text">
-                        Token <br> Launched
-                    </span>                                
-                    <a href="" class="DxFarilxDash__box-footer-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M6.25 4.75a1.5 1.5 0 0 0-1.5 1.5v11.5a1.5 1.5 0 0 0 1.5 1.5h11.5a1.5 1.5 0 0 0 1.5-1.5v-4a1 1 0 1 1 2 0v4a3.5 3.5 0 0 1-3.5 3.5H6.25a3.5 3.5 0 0 1-3.5-3.5V6.25a3.5 3.5 0 0 1 3.5-3.5h4a1 1 0 1 1 0 2h-4zm6.5-1a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v6.5a1 1 0 1 1-2 0V6.164l-4.793 4.793a1 1 0 1 1-1.414-1.414l4.793-4.793H13.75a1 1 0 0 1-1-1z" fill="currentColor"></path></g></svg>
-                    </a>
-                </div>
+                @endforeach
             </div>
+            
             <div class="row DxFarilxDash__stt-block bsd">
                 <div class="DxFarilxDash__stt col-6 offset-3">
                     <button class="DxFarilxDash__stt-btn btn btn--diss">LOAD 4</button>
@@ -152,10 +175,10 @@
                     </div>
                     <div class="DxFarilxDash__box-modal-footer">
                         <div class="DxFarilxDash__box-modal-footer-btn-block">
-                            <label onclick="modal__ac()" for="modal__box" class="DxFarilxDash__box-modal-footer-btn btn btn--diss">cancel</label>
+                            <label onclick="hidemodal()" for="modal__box" class="DxFarilxDash__box-modal-footer-btn btn btn--diss">cancel</label>
                         </div>
                         <div class="DxFarilxDash__box-modal-footer-btn-block">
-                            <btn onclick="modal__second()" id="btn__active" class="DxFarilxDash__box-modal-footer-btn btn btn--diss">confirm</btn>
+                            <btn onclick="modal__second(this)" id="btn__active" class="DxFarilxDash__box-modal-footer-btn btn btn--diss success">confirm</btn>
                         </div>
                     </div>
                 </div>
@@ -166,159 +189,61 @@
         <div id="dxdash__second" class="DxFarilxDash__open bsd">
             <div class="DxFarilxDash__open-title">Disclaimer not accepted. Please accept the disclaimer to continue!</div>
             <br> <br>
-            <label onclick="modal__ac()" for="modal__box">
+            <label onclick="modal__ac(this)" class="disclaimerco" for="modal__box">
                 <span class="DxFarilxDash__open__btn btn bgr--blu">OPEN DISCLAIMER</span>
             </label>
         </div>
         <div id="dxdash__thrid" class="DxFarilxDash__details-block">
-            <div class="DxFarilxDash__details">
-                <div class="DxFarilxDash__details-hr bsd"></div>
-                <div class="DxFarilxDash__box row">
-                    <div class="DxFarilxDash__box-left col-3">
-                        <div class="DxFarilxDash__box-left-item bsd">
-                            <div class="DxFarilxDash__box-left-item-title">Useful Links</div>
-                            <div class="DxFarilxDash__box-left-item-desc">
-                                <div class="DxFarilxDash__box-left-item-desc-link-block">
-                                    <a class="DxFarilxDash__box-left-item-desc-link" href="https://dextools.io/app/uniswap/pair-explorer/0xE23c6D73c586dC25A4a37f546DC181207e9b7b1d">Dextools Charts</a>  📈
-                                </div>
-                                <p class="DxFarilxDash__box-left-item-desc-text">
-                                    https://dextools.io/app/uniswap/pair-explorer/0xE23c6D73c586dC25A4a37f546DC181207e9b7b1d
-                                </p>
-                            </div>
-                        </div>
-                        <div class="DxFarilxDash__box-left-item bsd">
-                            <div class="DxFarilxDash__box-left-item-title">DxSale Automated Warning System</div>
-                            <div class="DxFarilxDash__box-left-item-desc">
-                                <div class="DxFarilxDash__box-left-item-desc-number">1  Warnings Detected</div>
-                                <div class="DxFarilxDash__box-left-item-desc-text">
-                                    <div class="DxFarilxDash__box-left-item-desc-text-hot">Liquidity Time Warning</div>
-                                    Liquidity of this sale unlocks in a very short timespan.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="DxFarilxDash__box-bet-block col-6">
-                        <div class="DxFairlxDash__box-bet bsd">
-                            <div class="DxFarilxDash__box-header DxFairlxDash__box-bet-item DxFairlxDash__box-bet-item--mbm">
-                                <div class="DxFarilxDash__box-header-avt">
-                                    <img class="DxFarilxDash__box-header-avt-img" src="https://i.ibb.co/HqRhtDq/logo-Placeholder.png" alt="">
-                                </div>
-                                <div class="DxFarilxDash__box-header-desc">
-                                    <h2 class="DxFairlxDash__box-bet-item-name blu-hot-h2">TST</h2>
-                                    <h2 class="DxFairlxDash__box-bet-item-name">Tester</h2>
-                                </div>
-                            </div>
-                            <div class="DxFairlxDash__box-bet-item">
-                                <div class="DxFairlxDash__box-bet-item-desc">
-                                    <div class="DxFairlxDash__box-bet-item-desc-text">
-                                        Token Address: 0xCA4037256e869cc40F66555fd54c5d02A772F937
-                                        <div class="DxFairlxDash__box-bet-item-desc-text-hot">Do not send ETH to the token address!</div>
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-desc-text">
-                                        ✅ This token is DxMint Verified (Standard Token)
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-desc-text z13">
-                                        This token has already launched! Use the links below to trade the token.
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-btn-block">
-                                        <a target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0xCA4037256e869cc40F66555fd54c5d02A772F937" class="DxFairlxDash__box-bet-item-btn btn bgr--blu">
-                                            <img class="DxFairlxDash__box-bet-item-btn-icon" src="https://app.uniswap.org/static/media/logo_white.811f9ef7.svg" alt="">
-                                            Trade on Uniswap
-                                        </a>
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-btn-block">
-                                        <a target="_blank" href="../components/DxSale__lock.html" class="DxFairlxDash__box-bet-item-btn btn btn--diss-b">
-                                            Dxlock locker
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <table class="DxFairlxDash__box-bet-table">
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Sale ID</th>
-                                    <td class="DxFairlxDash__box-bet-td">0</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Total Supply</th>
-                                    <td class="DxFairlxDash__box-bet-td">100000.00 TST</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Tokens For Launch</th>
-                                    <td class="DxFairlxDash__box-bet-td">100000.00 TST</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Initial Liquidity</th>
-                                    <td class="DxFairlxDash__box-bet-td">0.01 ETH</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Listing Rate</th>
-                                    <td class="DxFairlxDash__box-bet-td">9999999.999999998 TST/ETH</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Launch Time </th>
-                                    <td class="DxFairlxDash__box-bet-td">29 Aug 2021 at 12:10</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Liquidity Unlock Date</th>
-                                    <td class="DxFairlxDash__box-bet-td">30 Sep 2021 at 11:57</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="DxFarilxDash__box-right col-3">
-                        <div class="DxFarilxDash__box-right-item bsd">
-                            <div class="DxFarilxDash__box-right-item-avt">
-                                <svg class="DxFarilxDash__box-right-item-avt-img" style="background: url(&quot;https://c.disquscdn.com/next/embed/assets/img/disqus-social-icon-dark.a621bea3e02c9fa04fd3965a3d6f424d.svg&quot;) center center / contain no-repeat; display: block; margin: auto; width: 80px; height: 80px;"></svg>
-                            </div>
-                            <div class="DxFarilxDash__box-right-item-desc">
-                                Disqus seems to be taking longer than usual. 
-                            </div>
-                            <div class="DxFarilxDash__box-right-item-desc-link-block">
-                                <a href="" class="DxFarilxDash__box-right-item-desc-link">Reload</a>?
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="dxdash__thrid__content" class="DxFarilxDash__details">
             </div>
         </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     @section('script')
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             autoopen('td4', 'defidashboard');   
         </script>
-    @endsection
-    <script>
-    var ctx = document.getElementById('myChart__dxl__d');
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data : {
-            datasets: [{
-            label: 'My First Dataset',
-            data: [100, 0],
-            backgroundColor: [
-            'rgb(54, 162, 235)',
-            '#FFFFFF'
-            ],
-            borderColor: 'transparent',
-            radius: 80,
-        }]    
-    },
-        options: {
-            cutout: 70,
-            plugins: {
-                tooltip: {
-                    enabled: false
+        <script>
+            function createchar(id, db, cb) {
+                var ctx = document.getElementById('myChart__dxl__d'+id);
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data : {
+                        datasets: [{
+                        label: 'My First Dataset',
+                        data: [cb, db],
+                        backgroundColor: [
+                        'rgb(54, 162, 235)',
+                        '#FFFFFF'
+                        ],
+                        borderColor: 'transparent',
+                        radius: 80,
+                    }]    
                 },
-            },
-            elements: {
-                point: {
-                    hoverBorderWidth: 0,
+                    options: {
+                        cutout: 70,
+                        plugins: {
+                            tooltip: {
+                                enabled: false
+                            },
+                        },
+                        elements: {
+                            point: {
+                                hoverBorderWidth: 0,
+                            }
+                        }
+                    }
+                });
                 }
-            }
-        }
-    });
-    </script>
+        </script>
+        @foreach ($char as $key => $value)
+            <script>
+                var key = <?php echo $key; ?>;
+                var cb = <?php echo $value['cb']; ?>;
+                var db = <?php echo $value['db']; ?>;
+                createchar(key, cb, db);
+            </script>
+        @endforeach
+    @endsection
 @endsection

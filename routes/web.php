@@ -23,8 +23,13 @@ Route::prefix('metamask')->group(function () {
 Route::get('/defi-dashboard', 'Frontend\DxLaunchController@defidashboard')->name('defidashboard');
 
 Route::get('/deficreatesale', 'Frontend\DxLaunchController@deficreatesale')->name('deficreatesale');
+Route::post('/deficreatesale', 'Frontend\DxLaunchController@pdeficreatesale')->name('pdeficreatesale');
 
 Route::get('/checkdate', 'Frontend\DxLaunchController@checkdate')->name('checkdate');
+
+Route::get('/converttime', 'Frontend\DxLaunchController@converttime')->name('converttime');
+
+Route::get('/detaildxlaunch', 'Frontend\DxLaunchController@detaildxlaunch')->name('detaildxlaunch');
 
 //DxFairLaunch
 Route::get('/fair-dashboard', 'Frontend\DxFairLaunchController@fairdashboard')->name('fairdashboard');
