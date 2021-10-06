@@ -14,10 +14,10 @@ class DxLaunchController extends Controller
 {
     public function defidashboard()
     {
-        $dx = Dxlaunch::all();
+        $dx = Dxlaunch::orderby('id', 'DESC')->get();
         $char = array();
         foreach ($dx as $key => $value) {
-            $db = (5 / $value->soft) * 100;
+            $db = ($value->sumamount() / $value->soft) * 100;
             $char[$value->id]['db'] = $db;
             $char[$value->id]['cb'] = 100 - $db;
         }
@@ -35,7 +35,7 @@ class DxLaunchController extends Controller
         try {
             DB::beginTransaction();
 
-            $insertDataDX = $request->only(['token', 'price', 'soft', 'hard', 'min', 'max', 'liquidity', 'rate', 'start', 'end', 'lock', 'description']);
+            $insertDataDX = $request->only(['token', 'price', 'soft', 'hard', 'min', 'max', 'liquidity', 'rate', 'start', 'end', 'lock', 'description', 'token_name', 'token_symbol', 'token_decimal']);
             $id = DB::table('dxlaunches')->max('id') + 1;
             $dxlaunch = new Dxlaunch($insertDataDX);
             $dxlaunch->id = $id;

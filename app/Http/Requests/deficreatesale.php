@@ -25,6 +25,9 @@ class deficreatesale extends FormRequest
     {
         return [
             'token' => 'required|min:42|max:42',
+            'token_name' => 'required',
+            'token_symbol' => 'required',
+            'token_decimal' => 'required',
             'price' => 'required|numeric',
             'soft' => 'required|numeric',
             'hard' => 'required|numeric',
@@ -41,6 +44,9 @@ class deficreatesale extends FormRequest
             'token.required' => 'Your Token address # is an invalid Address!',
             'token.min' => 'Your Token address # is an invalid Address!',
             'token.max' => 'Your Token address # is an invalid Address!',
+            'token_name.required' => 'Token name cannot be blank',
+            'token_symbol.required' => 'Token symbol cannot be blank',
+            'token_decimal.required' => 'Token decimal cannot be blank',
             'price.required' => 'Price cannot be blank',
             'price.numeric' => 'Price must be number',
             'soft.required' => 'Soft cap cannot be blank',

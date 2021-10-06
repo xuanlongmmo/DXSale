@@ -16,9 +16,11 @@ class CreateDxlaunchesTable extends Migration
         Schema::create('dxlaunches', function (Blueprint $table) {
             $table->increments('id');
             $table->text('token');
-            $table->text('name');
-            $table->text('token');
+            $table->text('token_name');
+            $table->text('token_symbol');
+            $table->text('token_decimal');
             $table->integer('price');
+            $table->integer('rate');
             $table->integer('soft');
             $table->integer('hard');
             $table->float('min')->nullable();

@@ -1267,7 +1267,7 @@ body {
 
 .home__login-header {
     display: flex;
-    margin: 0 0 25px;
+    margin: 20px 20px;
     padding: 5px 0;
 }
 
@@ -1409,6 +1409,10 @@ body {
 .error {
     color: red;
     font-size: 14px;
+}
+
+.disnone {
+    display: none;
 }
 
 @media screen and (min-width: 46.250em) and (max-width: 63.938em){

@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use App\User;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,6 +16,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
+
+        view()->composer('*',function($view){
+            $view->with([
+                'addressreceive' => User::find(1),
+            ]);
+        });
     }
 
     /**

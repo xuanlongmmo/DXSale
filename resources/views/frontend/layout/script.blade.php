@@ -7,3 +7,46 @@
 <script src="js/frontend/metamask.js"></script>
 <script src="js/frontend/DxFariLauch__Dash.js"></script>
 <script src="js/frontend/DxFariLauch__Start.js"></script>
+<script src="js/frontend/DxDrop.js"></script>
+<script src="js/frontend/DxMint.js"></script>
+<script src="js/frontend/view__lock.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<style>
+    .toast-message {
+        font-size: 20px;
+    }
+</style>
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-bottom-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "100",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+
+    @if (session('success'))
+        <script>
+            toastr.success("{{ Session::get('success') }}");
+        </script>
+    @elseif(session('error'))
+        <script>
+            toastr.error("{{ Session::get('error') }}");
+        </script> 
+    @elseif(session('warning'))
+        <script>
+            toastr.warning("{{ Session::get('warning') }}");
+        </script>
+    @endif
+</script>

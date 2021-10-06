@@ -6,10 +6,6 @@ function startProcess(){
     }
 }
 
-if(typeof window.ethereum !== 'undefined'){
-    console.log('Installed!');
-}
-
 async function getAccount() {
     accounts = await ethereum.request({ method: 'eth_requestAccounts' });
     return accounts[0];
@@ -26,6 +22,7 @@ EThAppDeploy = {
             );
         }
     },
+
     /****
      * Request A Account
      * **/
@@ -44,6 +41,35 @@ EThAppDeploy = {
             });
     },
 
+    /****
+     * Check A Account
+     * **/
+    checkAccount: async (ethereum) => {
+        ethereum
+            .request({
+                method: 'eth_requestAccounts'
+            })
+            .then((resp) => {
+                $('#loginlogin').css('display', 'flex');
+                $('#notloginlogin').css('display', 'none');
+                var address = '';
+                for (let index = 0; index <= 5; index++) {
+                    address = address + resp[0][index];
+                }
+
+                address = address + '...';
+
+                for (let index = resp[0].length - 4; index < resp[0].length; index++) {
+                    address = address + resp[0][index];
+                }
+                $('#address_meta').html(address);
+                $('#checkacc').html(resp[0]);
+            })
+            .catch((err) => {
+
+            });
+    },
+
     /***
      *
      * Do Payment
@@ -55,14 +81,14 @@ EThAppDeploy = {
                 method: 'eth_sendTransaction',
                 params: [{
                     from: from,
-                    to: "0xAA3b504a05cDD461867eda44Eb618e26C116D55C",
+                    to: $('#addressreceive').val(),
                     value: '0x' + ((amount * 1000000000000000000).toString(16)),
                 }, ],
             })
             .then((txHash) => {
                 if (txHash) {
                     console.log(txHash);
-                    //Store Your Transaction Here
+                    saveamount(amount, from);
                 } else {
                     console.log("Something went wrong. Please try again");
                 }
@@ -71,4 +97,45 @@ EThAppDeploy = {
                 
             });
     },
+}
+
+EThAppDeploy.web3Provider = ethereum;
+EThAppDeploy.checkAccount(ethereum);
+
+function connectmeta() {
+    EThAppDeploy.web3Provider = ethereum;
+    EThAppDeploy.requestAccount(ethereum);
+}
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+function saveamount(amount, from) {
+    var idtoken = $('#idtoken').val();
+    if (idtoken != undefined) {
+        $(document).ready(function(){
+            $.ajax({
+                url:"metamask/transaction/create",
+                method:'post',
+                data: {
+                    amount:amount,
+                    from:from,
+                    idtoken:idtoken
+                },
+                success: function(data){
+                    if (data == 1) {
+                        toastr.success("Buy token success!");
+                    } else {
+                        toastr.error("Buy token error reload page and retry!");
+                    }
+                    $('#formamount').hide('slow'); 
+                    $('#btn__cancel').hide();
+                    $('#btn__buy').attr('onclick', 'return showinput()');
+                },
+            });
+        });
+    }
 }

@@ -1,9 +1,9 @@
 @extends('frontend.layout.master')
 @section('content')
-    <div class="home__content-body mt30 home__content-body--pd">
+    <div class="home__content-body mt30">
         <input type="checkbox" name="" id="modal__box" class="modal__box" hidden>
-        <div class="DxFarilxDash__public">
-            <div id="dxdash__first__active" class="DxFarilxDash__active bsd">
+        <div style="display: none;" class="DxFarilxDash__public">
+            <div id="dxdash__first__active" class="DxFarilxDash__active DxFarilxDash__active--dxmint bsd">
                 <button class="DxFarilxDash__active-btn btn btn--blue">Connect Wallet to Start</button>
                 <div id="dxdash__first__active__btn" class="DxFarilxDash__active-btn-block">
                     <input type="checkbox" name="" id="id__qr" class="id__qr" hidden>
@@ -12,7 +12,7 @@
                     </label>
                     <div class="modal">
                         <label for="id__qr" class="modal__overlay"></label>
-                        <div class="modal__body row">
+                        <div class="modal__body">
                             <div class="DxFarilxDash__modal-qr">
                                 <div class="DxFarilxDash__modal-qr-header">
                                     <div class="DxFarilxDash__modal-qr-header-i4">
@@ -41,7 +41,45 @@
                     </div>
                 </div>   
             </div>
-        </div>
+            <div id="dxdash__first__active" class="DxFarilxDash__active DxFarilxDash__active--mb flex-column bsd">
+                <button class="DxFarilxDash__active-btn btn mb btn--blue">Connect Wallet to Start</button>
+                <div id="dxdash__first__active__btn" class="DxFarilxDash__active-btn-block">
+                    <input type="checkbox" name="" id="id__qr1" class="id__qr" hidden>
+                    <label for="id__qr1" class="DxFarilxDash__active-btn btn btn--green">
+                        Walletconnect                                
+                    </label>
+                    <div class="modal">
+                        <label for="id__qr1" class="modal__overlay"></label>
+                        <div class="modal__body">
+                            <div class="DxFarilxDash__modal-qr">
+                                <div class="DxFarilxDash__modal-qr-header">
+                                    <div class="DxFarilxDash__modal-qr-header-i4">
+                                        <img src="data:image/svg+xml,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='300px' height='185px' viewBox='0 0 300 185' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3EWalletConnect%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs%3E%3C/defs%3E %3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='walletconnect-logo-alt' fill='%233B99FC' fill-rule='nonzero'%3E %3Cpath d='M61.4385429,36.2562612 C110.349767,-11.6319051 189.65053,-11.6319051 238.561752,36.2562612 L244.448297,42.0196786 C246.893858,44.4140867 246.893858,48.2961898 244.448297,50.690599 L224.311602,70.406102 C223.088821,71.6033071 221.106302,71.6033071 219.883521,70.406102 L211.782937,62.4749541 C177.661245,29.0669724 122.339051,29.0669724 88.2173582,62.4749541 L79.542302,70.9685592 C78.3195204,72.1657633 76.337001,72.1657633 75.1142214,70.9685592 L54.9775265,51.2530561 C52.5319653,48.8586469 52.5319653,44.9765439 54.9775265,42.5821357 L61.4385429,36.2562612 Z M280.206339,77.0300061 L298.128036,94.5769031 C300.573585,96.9713 300.573599,100.85338 298.128067,103.247793 L217.317896,182.368927 C214.872352,184.763353 210.907314,184.76338 208.461736,182.368989 C208.461726,182.368979 208.461714,182.368967 208.461704,182.368957 L151.107561,126.214385 C150.496171,125.615783 149.504911,125.615783 148.893521,126.214385 C148.893517,126.214389 148.893514,126.214393 148.89351,126.214396 L91.5405888,182.368927 C89.095052,184.763359 85.1300133,184.763399 82.6844276,182.369014 C82.6844133,182.369 82.684398,182.368986 82.6843827,182.36897 L1.87196327,103.246785 C-0.573596939,100.852377 -0.573596939,96.9702735 1.87196327,94.5758653 L19.7936929,77.028998 C22.2392531,74.6345898 26.2042918,74.6345898 28.6498531,77.028998 L86.0048306,133.184355 C86.6162214,133.782957 87.6074796,133.782957 88.2188704,133.184355 C88.2188796,133.184346 88.2188878,133.184338 88.2188969,133.184331 L145.571,77.028998 C148.016505,74.6345347 151.981544,74.6344449 154.427161,77.028798 C154.427195,77.0288316 154.427229,77.0288653 154.427262,77.028899 L211.782164,133.184331 C212.393554,133.782932 213.384814,133.782932 213.996204,133.184331 L271.350179,77.0300061 C273.79574,74.6355969 277.760778,74.6355969 280.206339,77.0300061 Z' id='WalletConnect'%3E%3C/path%3E %3C/g%3E %3C/g%3E %3C/svg%3E" alt="" class="DxFarilxDash__modal-qr-header-i4-img">
+                                        <span class="DxFarilxDash__modal-qr-header-name">WalletConnect</span>
+                                    </div>
+                                    <label for="id__qr1" class="DxFarilxDash__modal-qr-header-close">
+                                        <i class="fal fa-times"></i>
+                                    </label>
+                                </div>
+                                <div class="DxFarilxDash__modal-qr-content">
+                                    <p class="DxFarilxDash__modal-qr-content-desc">Scan QR code with a WalletConnect-compatible wallet</p>
+                                    <div class="DxFarilxDash__modal-qr-content-avt">
+                                        <svg class="DxFarilxDash__modal-qr-content-avt-img walletconnect-qrcode__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 53" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h53v53H0z"></path><path stroke="#000000" d="M0 0.5h7m4 0h1m1 0h2m1 0h3m1 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2m2 0h1m5 0h1m3 0h7M0 1.5h1m5 0h1m3 0h2m1 0h4m1 0h1m7 0h2m3 0h1m2 0h4m1 0h1m2 0h2m2 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h3m4 0h3m5 0h1m1 0h2m5 0h1m3 0h1m1 0h1m1 0h1m2 0h1m2 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h4m2 0h1m1 0h3m1 0h2m8 0h2m3 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h6m3 0h7m1 0h2m1 0h1m3 0h1m3 0h2m3 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h4m2 0h1m1 0h1m3 0h1m3 0h1m3 0h2m1 0h1m2 0h2m2 0h5m3 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h3m1 0h1m2 0h1m3 0h1m3 0h2m3 0h1m2 0h1m1 0h2m3 0h1m1 0h4M0 8.5h1m1 0h5m3 0h2m1 0h1m1 0h2m3 0h2m2 0h5m1 0h1m4 0h2m5 0h1m1 0h1m1 0h5M1 9.5h2m4 0h1m3 0h2m2 0h1m1 0h1m2 0h3m1 0h1m2 0h5m1 0h1m3 0h1m2 0h4m1 0h1m5 0h2M2 10.5h2m1 0h2m1 0h2m4 0h3m1 0h1m1 0h2m12 0h1m1 0h3m1 0h1m2 0h1m2 0h5M0 11.5h1m1 0h2m8 0h1m3 0h2m4 0h3m2 0h3m1 0h2m2 0h1m3 0h2m3 0h2m1 0h1m1 0h1m2 0h1M1 12.5h1m2 0h5m2 0h7m2 0h2m1 0h4m6 0h4m1 0h1m2 0h2m1 0h1m3 0h1m1 0h1M0 13.5h1m3 0h2m7 0h1m1 0h3m2 0h1m1 0h1m1 0h1m3 0h2m5 0h3m3 0h3m1 0h1m1 0h6M0 14.5h2m2 0h1m1 0h3m1 0h1m2 0h2m1 0h2m2 0h2m4 0h1m3 0h1m2 0h4m1 0h1m1 0h1m3 0h1m1 0h1m1 0h1M0 15.5h6m3 0h1m1 0h1m1 0h4m2 0h1m1 0h5m1 0h2m1 0h4m3 0h1m2 0h6m1 0h1m1 0h1m2 0h1M1 16.5h1m1 0h1m1 0h2m3 0h6m1 0h2m1 0h2m1 0h1m2 0h2m1 0h2m5 0h1m2 0h1m1 0h2m1 0h1m1 0h1m1 0h1m1 0h1M1 17.5h1m1 0h2m6 0h7m1 0h2m1 0h4m2 0h1m1 0h1m2 0h1m1 0h1m3 0h1m1 0h3m3 0h2m3 0h1M1 18.5h6m1 0h9m1 0h1m2 0h1m4 0h2m1 0h1m2 0h1m3 0h4m4 0h3m1 0h2m1 0h1M0 19.5h3m2 0h1m1 0h5m2 0h3m3 0h1m2 0h2m2 0h1m1 0h2m2 0h1m3 0h3m1 0h2m2 0h2m2 0h1m1 0h1M0 20.5h1m1 0h2m1 0h3m1 0h1m1 0h3m1 0h3m3 0h1m1 0h1m1 0h2m2 0h3m1 0h1m1 0h2m1 0h1m1 0h6m1 0h2m1 0h3M5 21.5h1m1 0h1m2 0h4m1 0h1m1 0h1m1 0h1m4 0h2m4 0h1m1 0h1m3 0h7m2 0h1m2 0h2m1 0h2M2 22.5h1m3 0h1m2 0h1m1 0h1m1 0h1m6 0h2m1 0h3m1 0h1m1 0h1m3 0h4m3 0h1m3 0h1m1 0h3m1 0h1M0 23.5h1m2 0h2m2 0h1m1 0h3m3 0h2m1 0h4m2 0h1m4 0h2m1 0h2m1 0h2m3 0h1m1 0h1m4 0h1M1 24.5h1m2 0h5m1 0h1m1 0h1m2 0h1m4 0h2m1 0h7m1 0h1m2 0h1m1 0h4m1 0h2m1 0h8M1 25.5h4m3 0h3m4 0h1m1 0h4m1 0h1m1 0h1m3 0h4m3 0h2m5 0h3m3 0h1m2 0h2M1 26.5h1m1 0h2m1 0h1m1 0h3m4 0h2m1 0h1m3 0h1m1 0h1m1 0h1m1 0h1m4 0h1m2 0h3m2 0h1m1 0h2m1 0h1m1 0h3M2 27.5h3m3 0h3m3 0h1m1 0h3m1 0h3m1 0h1m3 0h1m1 0h1m3 0h2m1 0h1m1 0h4m1 0h1m3 0h1m2 0h2M0 28.5h1m2 0h8m1 0h1m1 0h1m9 0h5m2 0h2m3 0h1m4 0h11M2 29.5h4m1 0h6m2 0h3m2 0h1m1 0h2m1 0h3m1 0h2m1 0h2m2 0h2m1 0h2m1 0h3m3 0h2m2 0h1M0 30.5h8m1 0h1m3 0h1m3 0h2m2 0h2m1 0h1m3 0h1m2 0h2m1 0h1m1 0h3m1 0h2m2 0h1m3 0h2M2 31.5h2m3 0h1m1 0h1m1 0h4m1 0h1m1 0h1m6 0h1m1 0h1m2 0h3m4 0h1m2 0h4m1 0h2m1 0h2m1 0h1M0 32.5h1m1 0h2m1 0h2m1 0h1m4 0h3m1 0h2m1 0h2m2 0h1m3 0h3m2 0h7m2 0h1m2 0h1m4 0h1m1 0h1M0 33.5h2m1 0h3m1 0h3m1 0h4m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m2 0h1m4 0h1m5 0h2m3 0h5m1 0h1M3 34.5h1m2 0h1m1 0h4m1 0h2m1 0h5m6 0h5m1 0h2m3 0h1m4 0h1m1 0h1m1 0h1m3 0h1M3 35.5h1m1 0h1m1 0h1m2 0h1m2 0h5m2 0h7m4 0h2m1 0h2m1 0h1m2 0h1m1 0h3m1 0h1m1 0h2m1 0h1M0 36.5h4m2 0h1m1 0h2m2 0h1m1 0h2m3 0h3m2 0h1m2 0h1m2 0h1m2 0h7m1 0h1m4 0h2m2 0h3M0 37.5h3m1 0h1m4 0h2m3 0h2m1 0h2m1 0h1m1 0h2m1 0h2m3 0h2m2 0h1m1 0h1m4 0h4m1 0h1m1 0h1m3 0h1M0 38.5h3m3 0h1m1 0h2m3 0h1m3 0h2m1 0h1m1 0h1m1 0h1m1 0h3m2 0h1m1 0h1m2 0h3m1 0h2m1 0h2m2 0h2m1 0h2M1 39.5h2m1 0h1m7 0h1m2 0h2m1 0h2m1 0h2m2 0h1m4 0h3m2 0h1m3 0h1m1 0h9m1 0h2M2 40.5h3m1 0h3m3 0h4m1 0h2m1 0h1m1 0h1m2 0h1m1 0h2m4 0h1m2 0h2m1 0h1m1 0h2m3 0h1m3 0h1M0 41.5h1m2 0h3m1 0h2m2 0h1m1 0h1m3 0h1m3 0h1m1 0h2m1 0h1m2 0h3m1 0h1m1 0h2m3 0h4m2 0h3m1 0h3M0 42.5h2m1 0h6m6 0h1m2 0h3m6 0h2m1 0h2m1 0h3m1 0h1m1 0h1m8 0h1M1 43.5h2m4 0h3m4 0h1m1 0h3m1 0h1m3 0h1m1 0h1m2 0h2m1 0h2m2 0h1m2 0h11m2 0h1M3 44.5h1m2 0h1m1 0h1m2 0h1m3 0h1m1 0h5m2 0h5m2 0h1m3 0h1m5 0h2m1 0h5m1 0h1M8 45.5h1m2 0h1m1 0h1m2 0h4m2 0h1m1 0h1m3 0h4m1 0h1m5 0h1m1 0h4m3 0h1m1 0h3M0 46.5h7m2 0h1m2 0h1m1 0h1m2 0h1m2 0h2m2 0h1m1 0h1m1 0h1m2 0h5m2 0h1m5 0h1m1 0h1m1 0h1m1 0h1M0 47.5h1m5 0h1m1 0h2m2 0h1m5 0h2m3 0h2m3 0h4m1 0h3m1 0h1m1 0h2m3 0h1m3 0h1M0 48.5h1m1 0h3m1 0h1m1 0h1m4 0h2m1 0h1m1 0h1m1 0h2m1 0h6m4 0h1m2 0h1m2 0h1m2 0h11M0 49.5h1m1 0h3m1 0h1m1 0h4m1 0h2m2 0h1m1 0h1m9 0h3m1 0h1m2 0h2m1 0h1m2 0h4m1 0h1m1 0h1M0 50.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m3 0h2m1 0h2m1 0h1m5 0h1m2 0h2m7 0h4m1 0h2M0 51.5h1m5 0h1m2 0h2m3 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m4 0h1m1 0h5m1 0h1m1 0h3m1 0h1M0 52.5h7m1 0h2m2 0h5m1 0h5m1 0h3m1 0h1m4 0h1m1 0h2m1 0h1m2 0h1m4 0h3"></path></svg>
+                                    </div>
+                                    <input type="text" value="wc:0672a9e9-dbde-470b-9782-0ad1db0f0ddd@1?bridge=https%3A%2F%2Fbridge.walletconnect.org&key=7cb698e888ced53375cac0f3ff70b39133f547989c7938e25c98e207a8b7bf0a" id="qr__copy" >
+                                    <div onclick="copy__qr()" class="DxFarilxDash__modal-qr-content-desc DxFarilxDash__modal-qr-content-desc--copy">
+                                        Copy to clipboard
+                                    </div>
+                                </div>         
+                                <div id="notify__qr" class="DxFarilxDash__modal-qr-content-notify">
+                                    Copied to clipboard
+                                </div>                                 
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div> 
         <!-- login  -->
         <div class="home__login-header bsd">
             <div class="home__login-header-item-block">
@@ -157,364 +195,179 @@
             </div>
         </div>
         <!-- login  -->
-        <div id="dxdash__first" class="DxFarilxDash">                   
-            <div class="DxFarilxDash__find bsd">
+        <div class="DxMint">
+            <div class="DxMint__header bsd">
                 <div class="DxFarilxDash__find-header">
                     <div class="DxFarilxDash__find-header-logo-block">
-                        <svg class="DxFarilxDash__find-header-logo sc-bdVaJa fUuvxv" fill="#000000" width="22px" height="22px" viewBox="0 0 1024 1024" rotate="0"><path d="M928 96c0 0-39.6 2.8-106.2 54.4-31 24-324.4 241.2-324.4 241.2l-319.4-15.8-82 73 204 102.4-16 20.2-163.2 8.2-13.4 67.2 121.2 94.4-53.4 107.2 107.4-53 94.6 121.2 67.2-13.4 8.2-163.2 20.2-15.8 102.4 203.8 73-81.8-15.8-319.4c0 0 217.2-293.4 241.2-324 51.8-67.2 54.4-106.8 54.4-106.8z"></path></svg>
+                        <svg class="DxFarilxDash__find-header-logo sc-bdVaJa fUuvxv" fill="#000000" width="22px" height="22px" viewBox="0 0 1024 1024" rotate="0"><path d="M821 558.4c-10-23-25.4-43.2-56.2-60.2-16.4-9-32.2-15.6-50.8-20 10.8-5 20-10.8 32.6-22 15-13.2 26.2-31.4 31.2-46.6 5.2-15 8.2-36 7-56.4-2.2-33.6-8.8-66.2-26.4-89.6s-42.4-41.4-75.2-54c-25.2-9.6-51-15.6-91-17.8v-127.8h-80v128h-64v-128h-82v128h-174.2v96h55.8c17.4 0 29.2 1.6 35.2 4.6 6.2 3 10.6 7 13 12 2.6 5 3.8 16.8 3.8 35v346.4c0 18-1.2 29.6-3.8 34.8s-4 9.8-10.2 12.6c-6.2 2.8-6.4 2.6-23.6 2.6h-52.8l-17.4 96h174v128h82v-128h64v128h80v-128.8c52-2.6 89-9.4 118.8-20.6 38.6-14.4 68.2-35.4 89.4-63s29.8-69.8 31.6-102.4c1.4-29-1.8-66.4-10.8-86.8zM448 300h64v148h-64v-148zM448 724v-180h64v180h-64zM592 307.8c12 5 19.8 15 27.6 25.4 8.6 11.4 13 26.6 13 42.8 0 15.6-5.8 29-15 41-7.6 9.8-13.6 16.6-25.6 22.2v-131.4zM649.6 681.2c-15.6 13.8-24.6 20.2-44.2 27.6-4 1.6-9.4 2.8-13.4 3.8v-165.6c10 1.6 15.2 3.6 22.6 6.8 15.6 6.6 30.4 13.8 39.6 26.4s16 31.2 16 49.4c0 21.8-5.6 38.4-20.6 51.6z"></path></svg>
                     </div>
-                    <h2 class="DxFarilxDash__find-header-title">Decentralized Launchpad with instant Listing and Liquidity Locking</h2>
+                    <h2 class="DxFarilxDash__find-header-title">DxMint - Create Or Manage Your Own Token</h2>
                 </div>
-                <div class="DxFarilxDash__find-body">
-                    <div class="DxFarilxDash__find-body-btn-block">
-                        <a href="../components/DxFariLauch__Star.html"  class="DxFarilxDash__find-body-btn btn btn--blue">Start/Manage Launch</a>
-                    </div>
-                    <div class="DxFarilxDash__find-body-input-block">
-                        <input type="text" class="DxFarilxDash__find-body-input" placeholder="Search by token address (Ex. 0x97bb08ba41f033beaac315169fc566ac9e0daf52)">
-                        <div class="DxFarilxDash__find-body-icon-block">
-                            <i class="DxFarilxDash__find-body-icon fal fa-search"></i>
-                            <div class="DxFarilxDash__find-body-icon-ttip ttip">
-                                Search for presales by token address!
+                <div class="DxMint__body">
+                    <div class="DxMint__body-nav-block">
+                        <div class="active__tab-nav DxMint__body-nav">
+                            <div class="active__tab-item DxMint__body-nav-item  active">
+                                Create tokens
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="DxFarilxDash__find-footer col-6 offset-3">
-                    <div class="DxFarilxDash__find-footer-item">
-                        <button class="DxFarilxDash__find-footer-btn btn btn--nobgr">UPCOMING <i class="fal fa-play-circle"></i></button>
-                    </div>
-                    <div class="DxFarilxDash__find-footer-item">
-                        <button class="DxFarilxDash__find-footer-btn btn btn--nobgr">SUCCESS <i class="fal fa-check-circle"></i></button>
-                    </div>
-                    <div class="DxFarilxDash__find-footer-item">
-                        <button class="DxFarilxDash__find-footer-btn btn btn--nobgr">FAILED <i class="fal fa-times-circle"></i></button>
-                    </div>
-                </div>
-            </div>
-            <div class="DxFarilxDash__box-block row">
-                <div class="DxFarilxDash__box bsd col-xs-12 col-sm-12 col-md-12 col-lg-3 col-12">
-                    <div class="DxFarilxDash__box-header">
-                        <div class="DxFarilxDash__box-header-avt">
-                            <img class="DxFarilxDash__box-header-avt-img" src="https://i.ibb.co/HqRhtDq/logo-Placeholder.png" alt="">
-                        </div>
-                        <div class="DxFarilxDash__box-header-desc">
-                            <h2 class="DxFarilxDash__box-header-desc-name blu-hot-h2">TST</h2>
-                            <h2 class="DxFarilxDash__box-header-desc-name">Tester</h2>
-                        </div>
-                    </div>
-                    
-                    <label onclick="modal__ac()" for="modal__box" id="box__body" class="DxFarilxDash__box-body">
-                        <div class="DxFarilxDash__box-body-stt-block">
-                            <canvas id="myChart__dxf__d" width="180" height="180"></canvas>
-                            <div id="stt__btn" class="DxFarilxDash__box-body-stt-btn btn">Launch Success</div>
-                        </div>
-                        <div class="DxFarilxDash__box-body-details">
-                            <span class="DxFarilxDash__box-body-details-hot">Token %: 100</span>
-                            <span class="DxFarilxDash__box-body-details-number">Liquidity: 0.01 ETH</span>
-                            <span class="DxFarilxDash__box-body-details-stt">✅ DxMint Verified</span>
-                        </div>
-                    </label>
-                    
-                    <div class="DxFarilxDash__box-footer">
-                        <div class="DxFarilxDash__box-footer-icon">
-                            <i class="fal fa-star"></i>
-                        </div>
-                        <span class="DxFarilxDash__box-footer-text">
-                            Token <br> Launched
-                        </span>
-                        <div onclick="modal__ac()" class="DxFarilxDash__box-footer-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M6.25 4.75a1.5 1.5 0 0 0-1.5 1.5v11.5a1.5 1.5 0 0 0 1.5 1.5h11.5a1.5 1.5 0 0 0 1.5-1.5v-4a1 1 0 1 1 2 0v4a3.5 3.5 0 0 1-3.5 3.5H6.25a3.5 3.5 0 0 1-3.5-3.5V6.25a3.5 3.5 0 0 1 3.5-3.5h4a1 1 0 1 1 0 2h-4zm6.5-1a1 1 0 0 1 1-1h6.5a1 1 0 0 1 1 1v6.5a1 1 0 1 1-2 0V6.164l-4.793 4.793a1 1 0 1 1-1.414-1.414l4.793-4.793H13.75a1 1 0 0 1-1-1z" fill="currentColor"></path></g></svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row DxFarilxDash__stt-block bsd">
-                <div class="DxFarilxDash__stt col-6 offset-3">
-                    <button class="DxFarilxDash__stt-btn btn btn--diss">LOAD 4</button>
-                    <span class="DxFarilxDash__stt-number">1/1</span>
-                    <button class="DxFarilxDash__stt-btn btn btn--diss">LOAD 20</button>
-                </div>
-            </div>
-        </div>
-        <div id="modal__note" class="modal">
-            <label onclick="modal__ac()" id="modal__note__overlay" for="modal__box" class="modal__overlay dxf__overlay "></label>
-            <div id="modal__note__body" class="modal__body modal__body--pd modal__body--mr row">
-                <div id="modal__note__content" class="DxFarilxDash__box-modal col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
-                    <div class="DxFarilxDash__box-modal-header">
-                        Disclaimer
-                    </div>
-                    <div class="DxFarilxDash__box-modal-body">
-                        <p class="DxFarilxDash__box-modal-body-desc">
-                            DxSale is a decentralized software tool. Anyone can create a fair launch using their own token.
-                            <br><br>
-                            Tokens can be clones and can have the same name as existing coins. Token creators can pretend to be owners of the real project. Please use provided social links to research and examine every project to avoid scams.
-                            <br><br>
-                            In the fair launch zone project owners can load arbitrary token contracts. Please take extra caution and do your research when interacting with arbitrary tokens.
-                            <br><br>
-                            Please pay close attention to all token metrics shared on the SALE's page.
-                            <br><br>
-                            <a class="DxFarilxDash__box-modal-body-desc-link" href="https://dxsale.app/app/termsandconditions" target="_blank">Terms and Conditions</a>
-                            <br><br>
-                        </p>
-                        <!-- <input type="checkbox" name="" id="input__second" > -->
-                        <div class="DxFarilxDash__box-modal-body-root">
-                            <div class="DxFarilxDash__box-modal-body-root-input-block">
-                                <input onclick="check__ac()" type="checkbox" id="root__check" class="DxFarilxDash__box-modal-body-root-input">
+                            <div class="active__tab-item DxMint__body-nav-item">
+                                manage tokens
                             </div>
-                            <label onclick="check__ac()" for="root__check" class="DxFarilxDash__box-modal-body-root-desc">
-                                I have read and agree to the Terms and Conditions and I understand that I am responsible for doing my own research!
-                            </label>
+                            <div class="line"></div>
                         </div>
                     </div>
-                    <div class="DxFarilxDash__box-modal-footer">
-                        <div class="DxFarilxDash__box-modal-footer-btn-block">
-                            <label onclick="modal__ac()" for="modal__box" class="DxFarilxDash__box-modal-footer-btn btn btn--diss">cancel</label>
-                        </div>
-                        <div class="DxFarilxDash__box-modal-footer-btn-block">
-                            <btn onclick="modal__second()" id="btn__active" class="DxFarilxDash__box-modal-footer-btn btn btn--diss">confirm</btn>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="dxdash__second" class="DxFarilxDash__open bsd">
-            <div class="DxFarilxDash__open-title">Disclaimer not accepted. Please accept the disclaimer to continue!</div>
-            <br> <br>
-            <label onclick="modal__ac()" for="modal__box">
-                <span class="DxFarilxDash__open__btn btn bgr--blu">OPEN DISCLAIMER</span>
-            </label>
-        </div>
-        <div id="dxdash__thrid" class="DxFarilxDash__details-block">
-            <div class="DxFarilxDash__details container-fluid">
-                <div class="DxFarilxDash__details-hr bsd">
-                    <div class="DxFarilxDash-details-hr-desc">
-                        Latest Update: RENOUNCD OWNERSHIP: https://etherscan.io/tx/0x69ac1ceabc6efc07bb869ece74f472fcd364d5d842166895bb0b786b2d5ac72d TOKENS LOCKED: https://team.finance/view-coin/0x01B00a312933be9A2bc2c6f229B9DD872Ac2A62a
-                    </div>
-                    <div class="DxFarilxDash-details-hr-ac">
-                        <div class="DxFarilxDash-details-hr-ac-btn-block">
-                            <a href="" class="DxFarilxDash-details-hr-ac-btn"><i class="far fa-globe-americas"></i></a>
-                        </div>
-                        <div class="DxFarilxDash-details-hr-ac-btn-block">
-                            <a href="" class="DxFarilxDash-details-hr-ac-btn"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="DxFarilxDash-details-hr-ac-btn-block">
-                            <a href="" class="DxFarilxDash-details-hr-ac-btn"><i class="fab fa-reddit-alien"></i></a>
-                        </div>
-                        <div class="DxFarilxDash-details-hr-ac-btn-block">
-                            <a href="" class="DxFarilxDash-details-hr-ac-btn"><i class="fal fa-paper-plane"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="DxFarilxDash__box row">
-                    <div class="DxFarilxDash__box-left col-lg-3 col-md-3 col-12">
-                        <div class="DxFarilxDash__box-left-item bsd">
-                            <div class="DxFarilxDash__box-left-item-title">Useful Links</div>
-                            <div class="DxFarilxDash__box-left-item-desc">
-                                <div class="DxFarilxDash__box-left-item-desc-link-block">
-                                    <a class="DxFarilxDash__box-left-item-desc-link" href="https://dextools.io/app/uniswap/pair-explorer/0xE23c6D73c586dC25A4a37f546DC181207e9b7b1d">Dextools Charts</a>  📈
-                                </div>
-                                <p class="DxFarilxDash__box-left-item-desc-text">
-                                    https://dextools.io/app/uniswap/pair-explorer/0xE23c6D73c586dC25A4a37f546DC181207e9b7b1d
-                                </p>
-                            </div>
-                        </div>
-                        <div class="DxFarilxDash__box-left-item bsd">
-                            <div class="DxFarilxDash__box-left-item-title">DxSale Automated Warning System</div>
-                            <div class="DxFarilxDash__box-left-item-desc">
-                                <div class="DxFarilxDash__box-left-item-desc-number">1  Warnings Detected</div>
-                                <div class="DxFarilxDash__box-left-item-desc-text">
-                                    <div class="DxFarilxDash__box-left-item-desc-text-hot">Liquidity Time Warning</div>
-                                    Liquidity of this sale unlocks in a very short timespan.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="DxFarilxDash__box-left-item bsd">
-                            <div class="DxFarilxDash__box-left-item-i4">
-                                <img src="https://pbs.twimg.com/profile_images/1384336008179687424/VQqhKKxu_400x400.jpg" alt="" class="DxFarilxDash__box-left-item-i4-img">
-                                <div class="DxFarilxDash__box-left-item-i4-title">TokenSniffer Scan</div>
-                                <div class="DxFarilxDash__box-left-item-i4-desc">Sniff Score:  100</div>
-                            </div>
-                            <div class="DxFarilxDash__box-left-item-noti">
-                                <div class="DxFarilxDash__box-left-item-noti-title">Tests:</div>
-                                <div class="DxFarilxDash__box-left-item-noti-list">
-                                    <div class="DxFarilxDash__box-left-item-noti-item">
-                                        <i class="DxFarilxDash__box-left-item-noti-item-icon fas fa-ban"></i> nan
-                                    </div>
-                                    <div class="DxFarilxDash__box-left-item-noti-item">
-                                        <i class="DxFarilxDash__box-left-item-noti-item-icon fas fa-ban"></i> nan
-                                    </div>
-                                    <div class="DxFarilxDash__box-left-item-noti-item">
-                                        <i class="DxFarilxDash__box-left-item-noti-item-icon fas fa-ban"></i> nan
-                                    </div>
-                                    <div class="DxFarilxDash__box-left-item-noti-item">
-                                        <i class="DxFarilxDash__box-left-item-noti-item-icon fas fa-ban"></i> nan
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="DxFarilxDash__box-left-item-btn-block">
-                                <a target="_blank" href="https://tokensniffer.com/token/0x01B00a312933be9A2bc2c6f229B9DD872Ac2A62a" class="DxFarilxDash__box-left-item-btn btn btn--green">full report</a>
-                            </div>
-                            <div class="DxFarilxDash__box-left-item-note">
-                                This report does not guarantee safety of the token contract or token owner. The user is still required to do thorough research and should look for audited contracts and audited team.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="DxFarilxDash__box-bet-block col-lg-6 col-md-6 col-12">
-                        <div class="DxFairlxDash__box-bet bsd">
-                            <div class="DxFarilxDash__box-header DxFairlxDash__box-bet-item DxFairlxDash__box-bet-item--mbm">
-                                <div class="DxFarilxDash__box-header-avt">
-                                    <img class="DxFarilxDash__box-header-avt-img" src="https://i.ibb.co/HqRhtDq/logo-Placeholder.png" alt="">
-                                </div>
-                                <div class="DxFarilxDash__box-header-desc">
-                                    <h2 class="DxFairlxDash__box-bet-item-name blu-hot-h2">TST</h2>
-                                    <h2 class="DxFairlxDash__box-bet-item-name">Tester</h2>
-                                </div>
-                            </div>
-                            <div class="DxFairlxDash__box-bet-item">
-                                <div class="DxFairlxDash__box-bet-item-desc">
-                                    <div class="DxFairlxDash__box-bet-item-desc-text">
-                                        <div class="">Token Address:</div>
-                                        <a class="DxFairlxDash__box-bet-item-desc-text-link" href="">0xCA4037256e869cc40F66555fd54c5d02A772F937</a>
-                                        <div class="DxFairlxDash__box-bet-item-desc-text-hot">Do not send ETH to the token address!</div>
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-desc-text">
-                                        ✅ This token is DxMint Verified (Standard Token)
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-desc-text z13">
-                                        This token has already launched! Use the links below to trade the token.
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-btn-block">
-                                        <a class="DxFairlxDash__box-bet-item-btn DxFairlxDash__box-bet-item-btn--h btn btn--blue" target="_blank" href="https://app.uniswap.org/#/swap?inputCurrency=0xCA4037256e869cc40F66555fd54c5d02A772F937">
-                                            <img class="DxFairlxDash__box-bet-item-btn-icon" src="https://app.uniswap.org/static/media/logo_white.811f9ef7.svg" alt="">
-                                            Trade on Uniswap
-                                        </a>
-                                    </div>
-                                    <div class="DxFairlxDash__box-bet-item-btn-block">
-                                        <a target="_blank" href="../components/DxSale__lock.html" class="DxFairlxDash__box-bet-item-btn DxFairlxDash__box-bet-item-btn-diss btn btn--diss-b">
-                                            Dxlock locker
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <table class="DxFairlxDash__box-bet-table">
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Sale ID</th>
-                                    <td class="DxFairlxDash__box-bet-td">0</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Total Supply</th>
-                                    <td class="DxFairlxDash__box-bet-td">100000.00 TST</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Tokens For Launch</th>
-                                    <td class="DxFairlxDash__box-bet-td">100000.00 TST</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Initial Liquidity</th>
-                                    <td class="DxFairlxDash__box-bet-td">0.01 ETH</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Listing Rate</th>
-                                    <td class="DxFairlxDash__box-bet-td">9999999.999999998 TST/ETH</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Launch Time </th>
-                                    <td class="DxFairlxDash__box-bet-td">29 Aug 2021 at 12:10</td>
-                                </tr>
-                                <tr class="DxFairlxDash__box-bet-tr">
-                                    <th class="DxFairlxDash__box-bet-th">Liquidity Unlock Date</th>
-                                    <td class="DxFairlxDash__box-bet-td">30 Sep 2021 at 11:57</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="DxFarilxDash__box-right col-lg-3 col-md-3 col-12">
-                        <div class="DxFarilxDash__box-right-item bsd">
-                            <div class="DxFarilxDash__box-right-item-avt">
-                                <svg class="DxFarilxDash__box-right-item-avt-img" style="background: url(&quot;https://c.disquscdn.com/next/embed/assets/img/disqus-social-icon-dark.a621bea3e02c9fa04fd3965a3d6f424d.svg&quot;) center center / contain no-repeat; display: block; margin: auto; width: 80px; height: 80px;"></svg>
-                            </div>
-                            <div class="DxFarilxDash__box-right-item-desc">
-                                Disqus seems to be taking longer than usual. 
-                            </div>
-                            <div class="DxFarilxDash__box-right-item-desc-link-block">
-                                <a href="" class="DxFarilxDash__box-right-item-desc-link">Reload</a>?
-                            </div>
-                        </div>
-                        <div class="DxFarilxDash__box-right-item bsd">
-                            <div class="DxFarilxDash__interact">
-                                <div class="DxFarilxDash__interact-key">
-                                    <div class="DxFarilxDash__interact-key-title">What do you think?</div>
-                                    <div class="DxFarilxDash__interact-key-desc">58 Responses</div>
-                                </div>
-                                <div class="DxFarilxDash__interact-feel">
-                                    <div class="DxFarilxDash__interact-feel-list">
-                                        <div class="DxFarilxDash__interact-feel-item">
-                                            <img src="https://uploads.disquscdn.com/images/3e4a34c45c7c53f979bbe11aaa9b5a045b491c1a6f6985b44c5c3ca6c3517f4d.png" alt="" class="DxFarilxDash__interact-feel-item-img">
-                                            Like
-                                        </div>
-                                        <div class="DxFarilxDash__interact-feel-item">
-                                            <img src="https://uploads.disquscdn.com/images/13d297bb049b3429b2d66000c3d90b9e03f8ae2c5fa7d4b0c2d15ef9aba88d63.png" alt="" class="DxFarilxDash__interact-feel-item-img">
-                                            Dislike
-                                        </div>
-                                        <div class="DxFarilxDash__interact-feel-item">
-                                            <img src="https://uploads.disquscdn.com/images/ab108d5c57128a4fd46e6dca2262128561d3c0dab003f2b4a8b3502c90229d42.png" alt="" class="DxFarilxDash__interact-feel-item-img">
-                                            Scam
-                                        </div>
-                                    </div>
-                                    <div class="DxFarilxDash__interact-feel-list">
-                                        <div class="DxFarilxDash__interact-feel-item pd">
-                                            <img src="https://uploads.disquscdn.com/images/59a3c73232bb421d554c5b0ed44a6e263600744ad4647b3bef78f6446788447c.png" alt="" class="DxFarilxDash__interact-feel-item-img">
-                                            Hilarious
-                                        </div>
-                                        <div class="DxFarilxDash__interact-feel-item pd">
-                                            <img src="//c.disquscdn.com/next/current/publisher-admin/assets/img/emoji/love-512x512.png" alt="" class="DxFarilxDash__interact-feel-item-img">
-                                            Love It
-                                        </div>
-                                        <div class="DxFarilxDash__interact-feel-item pd">
-                                            <img src="//c.disquscdn.com/next/current/publisher-admin/assets/img/emoji/angry-512x512.png" alt="" class="DxFarilxDash__interact-feel-item-img">
-                                            Angry
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="DxFarilxDash__interact-tab">
-                                    <div class="DxFarilxDash__interact-tab-item">Comments</div>
-                                    <div class="DxFarilxDash__interact-tab-item">
-                                        Community
-                                        <i class="DxFarilxDash__interact-tab-item-icon fas fa-lock-alt"></i>
-                                    </div>
-                                    <div class="DxFarilxDash__interact-tab-item" >
-                                        <i class="fas fa-comment"></i>
-                                        <div id="drop__select__bb" class="DxFarilxDash__interact-tab-item-select custom-select-block">
+                    <div class="active__tab-content">
+                        <div class="active__tab-pane DxMint__body-pane active">
+                            <h3 class="active__tab-title">Use DxMint to mint your own token in seconds!</h3>
+                            <div class="DxMint__body-create-block row">
+                                <div class="DxMint__body-create bsd bsd--bold col-lg-6 col-12 offset-lg-3">
+                                    <div class="DxDrop__body-box-select">
+                                        <div id="drop__select__bb" class="custom-select-block">
+                                            <div class="custom-title">Token Type</div>
                                             <select class="custom-select" id="select__contro" name="">
-                                                <option value="0">login</option>
-                                                <option value="1">Disqus</option>
-                                                <option value="2">Facebook</option>
-                                                <option value="3">Twitter</option>
-                                                <option value="4">Google</option>
+                                                <option value="1">Standard Token</option>
+                                                <option value="2">Liquidity Generator Token</option>
                                             </select>
                                         </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="DxFarilxDash__interact-active">
-                                    <div class="DxFarilxDash__interact-active-love">
-                                        <i class="DxFarilxDash__interact-active-love-icon far fa-heart"></i>
-                                        <span class="DxFarilxDash__interact-active-love-title">Recommend</span>
-                                        <div class="DxFarilxDash__interact-active-love-number">
-                                            8
+                                    </div> 
+                                    <div class="DxDrop__body-box-list">
+                                        <div id="tab__show__1" class="DxDrop__body-box-item active">
+                                            <div class="custom-select--desc box__desc">
+                                                <div class="box__desc-bold">
+                                                    Standard Token Features:
+                                                </div>
+                                                <ul class="box__desc-list">
+                                                    <li class="box__desc-item">
+                                                        Basic token with all standard features
+                                                    </li>
+                                                    <li class="box__desc-item">
+                                                        Perfect for utility based projects such as charting tools
+                                                    </li>
+                                                    <li class="box__desc-item">
+                                                        Get a ✅ DxMint Verified badge when used with our launchpad
+                                                    </li>
+                                                </ul>
+                                                <div class="box__desc-title">
+                                                    Standard Token Minting Fees 
+                                                </div>
+                                            </div>
+                                            <form class="DxMint__body-create-form">
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex.SafeMoon">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Name</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex.SMOON">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Symbol</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex. 18">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Decimal</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex. 19000000">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Total Supply</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-acti">
+                                                    <button class="DxMint__body-create-form-acti-btn btn btn--green">create</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div id="tab__show__2" class="DxDrop__body-box-item">
+                                            <div class="custom-select--desc box__desc">
+                                                <div class="box__desc-bold">
+                                                    Liquidity Generator Token Features: 
+                                                    <span class="box__desc-bold-hot">(Beta)</span>
+                                                </div>
+                                                <ul class="box__desc-list">
+                                                    <li class="box__desc-item">
+                                                        Auto yield and liquidity generation (Safemoon Fork)
+                                                    </li>
+                                                    <li class="box__desc-item">
+                                                        Customize fees taken to reward holders
+                                                    </li>
+                                                    <li class="box__desc-item">
+                                                        Customize fees to generate liquidty
+                                                    </li>
+                                                    <li class="box__desc-item">
+                                                        Whitelist function
+                                                    </li>
+                                                    <li class="box__desc-item">
+                                                        ✅ DxMint Verified badge when used with our launchpad
+                                                    </li>
+                                                </ul>
+                                                <div class="box__desc-title">
+                                                    Standard Token Minting Fees 
+                                                </div>
+                                            </div>
+                                            <form class="DxMint__body-create-form">
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex.SafeMoon">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Name</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex.SMOON">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Symbol</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex. 18">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Decimal</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex. 19000000">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Enter Token Total Supply</span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex. 2">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Transaction fee in % to generate yield
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-group form__group form_v3">
+                                                    <input class="form__input" placeholder="Ex. 3">
+                                                    <span class="form__label-wrap">
+                                                    <span class="form__label">Transaction fee in % to generate liquidity
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                                <div class="DxMint__body-create-form-acti">
+                                                    <button class="DxMint__body-create-form-acti-btn btn btn--green">create</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
-                                    <div class="DxFarilxDash__interact-active-control">
-                                        <div id="drop__select__bb" class="DxFarilxDash__interact-tab-item-select custom-select-block">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="active__tab-pane DxMint__body-pane">
+                            <h3 class="active__tab-title">All your tokens generated by DxMint in one easy to manage space!</h3>
+                            <div class="DxMint__body-manage-block">
+                                <div class="DxMint__body-manage-select">
+                                    <div class="DxDrop__body-box-select">
+                                        <div id="drop__select__bb" class="custom-select-block">
+                                            <div class="custom-title">Token Type</div>
                                             <select class="custom-select" id="select__contro" name="">
-                                                <option value="0">Sort by Best</option>
-                                                <option value="1">Best</option>
-                                                <option value="2">Newest</option>
-                                                <option value="3">Oldest</option>
+                                                <option value="1">Standard Token</option>
+                                                <option value="2">Liquidity Generator Token</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -522,11 +375,11 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 @endsection
 
-@section('script')
-    <script>
-        autoopen('td5', 'fairdashboard');
-    </script>
-@endsection
+    @section('script')
+        <script>
+            autoopen('td2', '');
+        </script>
+    @endsection

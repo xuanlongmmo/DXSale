@@ -153,6 +153,30 @@ function checkvalidate(value) {
         }
     }
 
+    if (value == 'token_name') {
+        let count = $('#'+value).val();
+        if (count == '') {
+            alert('Your token name required!');
+            return false;
+        }
+    }
+
+    if (value == 'token_symbol') {
+        let count = $('#'+value).val();
+        if (count == '') {
+            alert('Your token symbol required!');
+            return false;
+        }
+    }
+
+    if (value == 'token_decimal') {
+        let count = $('#'+value).val();
+        if (count == '') {
+            alert('Your token decimal required!');
+            return false;
+        }
+    }
+
     if (value == 'soft') {
         let check = $('#'+value).val();
         if (check == '' || check < 1 || check % 1 !== 0) {

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDxlaunchInformationsTable extends Migration
+class CreateDxlaunchTransactionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateDxlaunchInformationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dxlaunch_informations', function (Blueprint $table) {
+        Schema::create('dxlaunch_transactions', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('dxlaunch_id')->unsigned();
             $table->foreign('dxlaunch_id')->references('id')->on('dxlaunches')->onDelete('cascade');
-            $table->text('logo_link')->nullable();
-            $table->text('website_link')->nullable();
-            $table->text('github_link')->nullable();
-            $table->text('twitter_link')->nullable();
-            $table->text('reddit_link')->nullable();
-            $table->text('telegram_link')->nullable();
+            $table->text('address')->nullable();
+            $table->text('amount_eth')->nullable();
+            $table->text('amount_token')->nullable();
+            $table->text('status')->default(1);
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class CreateDxlaunchInformationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dxlaunch_informations');
+        Schema::dropIfExists('dxlaunch_transactions');
     }
 }

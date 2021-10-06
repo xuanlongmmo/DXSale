@@ -6,13 +6,13 @@
         </a>
     </li>
     <li onclick="return ope(this)" id="td2" class="home__nav-item">
-        <a href="./components/DxMint.html" class="home__nav-item-link">
+        <a href="{{ route('dxmint') }}" class="home__nav-item-link">
             <svg id="svgtd2" class="home__nav-item-icon sc-bdVaJa fUuvxv" fill="#757575" width="22px" height="22px" viewBox="0 0 1024 1024" rotate="0"><path d="M821 558.4c-10-23-25.4-43.2-56.2-60.2-16.4-9-32.2-15.6-50.8-20 10.8-5 20-10.8 32.6-22 15-13.2 26.2-31.4 31.2-46.6 5.2-15 8.2-36 7-56.4-2.2-33.6-8.8-66.2-26.4-89.6s-42.4-41.4-75.2-54c-25.2-9.6-51-15.6-91-17.8v-127.8h-80v128h-64v-128h-82v128h-174.2v96h55.8c17.4 0 29.2 1.6 35.2 4.6 6.2 3 10.6 7 13 12 2.6 5 3.8 16.8 3.8 35v346.4c0 18-1.2 29.6-3.8 34.8s-4 9.8-10.2 12.6c-6.2 2.8-6.4 2.6-23.6 2.6h-52.8l-17.4 96h174v128h82v-128h64v128h80v-128.8c52-2.6 89-9.4 118.8-20.6 38.6-14.4 68.2-35.4 89.4-63s29.8-69.8 31.6-102.4c1.4-29-1.8-66.4-10.8-86.8zM448 300h64v148h-64v-148zM448 724v-180h64v180h-64zM592 307.8c12 5 19.8 15 27.6 25.4 8.6 11.4 13 26.6 13 42.8 0 15.6-5.8 29-15 41-7.6 9.8-13.6 16.6-25.6 22.2v-131.4zM649.6 681.2c-15.6 13.8-24.6 20.2-44.2 27.6-4 1.6-9.4 2.8-13.4 3.8v-165.6c10 1.6 15.2 3.6 22.6 6.8 15.6 6.6 30.4 13.8 39.6 26.4s16 31.2 16 49.4c0 21.8-5.6 38.4-20.6 51.6z"></path></svg>
             <span id="name2" class="home__nav-item-name">DxMint</span>
         </a>
     </li>
     <li onclick="return ope(this)" id="td3" class="home__nav-item">
-        <a href="./components/DxDrop.html" class="home__nav-item-link">
+        <a href="{{ route('dxdrop') }}" class="home__nav-item-link">
             <svg id="svgtd3" class="home__nav-item-icon sc-bdVaJa fUuvxv" fill="#757575" width="22px" height="22px" viewBox="0 0 1024 1024" rotate="0"><path d="M704 296c-74-104-145-165-192-200-46.2 32-117.2 96.2-191.6 199.6s-125.8 215.6-128.2 340c0 2.4-0.2 5-0.2 7.4 0 36.6 7.8 71.6 21.8 103.6 8.2 18.6 18.4 36 30.4 52.4 57 77.6 155.6 128.8 267.6 128.8 176.8 0 320.2-127.6 320.2-284.8 0-126.6-54-243-128-347zM531.8 822c-31.6 0-65.4-2.8-91.8-14.8 174-27.2 238-91.2 279.6-244.4 10.4 22.4 12.4 47.4 12.4 73.6 0 102.4-89.6 185.6-200.2 185.6z"></path></svg>
             <span id="name3" class="home__nav-item-name">DxDrop</span>
         </a>
@@ -52,10 +52,10 @@
         <ul id="td5_son" class="home__nav-son none">
             <li class="home__nav-son-item-title">Launchpad</li>
             <li class="home__nav-son-item">
-                <a href="./components/DxFariLauch__Dashboard.html" class="home__nav-son-item-link">Dashboard</a>
+                <a id="fairdashboard" href="{{ route('fairdashboard') }}" class="home__nav-son-item-link">Dashboard</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/DxFariLauch__Star.html" class="home__nav-son-item-link">Start or Manage</a>
+                <a id="faircreatesale" href="{{ route('faircreatesale') }}" class="home__nav-son-item-link">Start or Manage</a>
             </li>
         </ul>
     </li>
@@ -72,14 +72,14 @@
         </div>
         <ul id="td6_son" class="home__nav-son none">
             <li class="home__nav-son-item">
-                <a href="./components/view__lock.html" class="home__nav-son-item-link">View Lockers</a>
+                <a id="viewlock" href="{{ route('viewlock') }}" class="home__nav-son-item-link">View Lockers</a>
             </li>
             <li class="home__nav-son-item-title">Lock or Manage Assets</li>
             <li class="home__nav-son-item">
-                <a href="./components/lock__lp__tk.html" class="home__nav-son-item-link">Lock LP Tokens</a>
+                <a id="dxlplock" href="{{ route('dxlplock') }}" class="home__nav-son-item-link">Lock LP Tokens</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/lock__lp__tk.html" class="home__nav-son-item-link">Lock Tokens</a>
+                <a id="dxlock" href="{{ route('dxlock') }}" class="home__nav-son-item-link">Lock Tokens</a>
             </li>
         </ul>
     </li>
@@ -97,10 +97,10 @@
         <ul id="td7_son" class="home__nav-son none">
             <li class="home__nav-son-item-title">Partner Portals</li>
             <li class="home__nav-son-item">
-                <a href="./components/security__audit.html" class="home__nav-son-item-link">Audit</a>
+                <a id="auditportal" href="{{ route('auditportal') }}" class="home__nav-son-item-link">Audit</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/security__audit.html" class="home__nav-son-item-link">KYC</a>
+                <a id="kycportal" href="{{ route('kycportal') }}" class="home__nav-son-item-link">KYC</a>
             </li>
         </ul>
     </li>
@@ -118,10 +118,10 @@
         <ul id="td8_son" class="home__nav-son none">
             <li class="home__nav-son-item-title">SALE Token Tools</li>
             <li class="home__nav-son-item">
-                <a href="./components/Dao__Fee.html" class="home__nav-son-item-link">Fee Management</a>
+                <a id="feemanagement" href="{{ route('feemanagement') }}" class="home__nav-son-item-link">Fee Management</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/Dao__ETH.html" class="home__nav-son-item-link">ETH BSC Bridge</a>
+                <a id="salebridge" href="{{ route('salebridge') }}" class="home__nav-son-item-link">ETH BSC Bridge</a>
             </li>
         </ul>
     </li>
@@ -139,32 +139,65 @@
         <ul id="td9_son" class="home__nav-son none">
             <li class="home__nav-son-item-title">V2.9</li>
             <li class="home__nav-son-item">
-                <a href="./components/DxFariLauch__Dashboard.html" class="home__nav-son-item-link">DxLaunch</a>
+                <a href="{{ route('dxlaunch') }}" class="home__nav-son-item-link">DxLaunch</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/view__lock.html" class="home__nav-son-item-link">DxLock</a>
+                <a href="{{ route('dxlockar') }}" class="home__nav-son-item-link">DxLock</a>
             </li>
             <li class="home__nav-son-item-title">V2.5</li>
             <li class="home__nav-son-item">
-                <a href="./components/DxFariLauch__Dashboard.html" class="home__nav-son-item-link">DxLaunch</a>
+                <a href="{{ route('dxlaunch') }}" class="home__nav-son-item-link">DxLaunch</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/view__lock.html" class="home__nav-son-item-link">DxLock</a>
+                <a href="{{ route('dxlockar') }}" class="home__nav-son-item-link">DxLock</a>
             </li>
             <li class="home__nav-son-item-title">V1 DEFI</li>
             <li class="home__nav-son-item">
-                <a href="./components/DxFariLauch__Dashboard.html" class="home__nav-son-item-link">DxLaunch</a>
+                <a href="{{ route('dxlaunch') }}" class="home__nav-son-item-link">DxLaunch</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/view__lock.html" class="home__nav-son-item-link">DxLock</a>
+                <a href="{{ route('dxlockar') }}" class="home__nav-son-item-link">DxLock</a>
             </li>
             <li class="home__nav-son-item-title">V1 Standard</li>
             <li class="home__nav-son-item">
-                <a href="./components/DxFariLauch__Dashboard.html" class="home__nav-son-item-link">DxLaunch</a>
+                <a href="{{ route('dxlaunch') }}" class="home__nav-son-item-link">DxLaunch</a>
             </li>
             <li class="home__nav-son-item">
-                <a href="./components/view__lock.html" class="home__nav-son-item-link">DxStake</a>
+                <a href="{{ route('dxlockar') }}" class="home__nav-son-item-link">DxStake</a>
             </li>
         </ul>
     </li>
+
+    @if (Auth::check())
+        <li onclick="return ope(this)" id="td10" class="home__nav-item expanded">
+            <div class="home__nav-item-title">
+                <span class="home__nav-item-title-desc">
+                    <i class="fas fa-user-shield"></i>
+                    {{--  <svg id="svgtd10" class="home__nav-item-icon sc-bdVaJa fUuvxv" fill="#757575" width="22px" height="22px" viewBox="0 0 1024 1024" rotate="0"><path d="M960 256h-896v640h896v-640z M144 192h736v32h-736v-32z M208 128h608v32h-608v-32z"></path></svg>  --}}
+                    <span style="padding-left: 10px" id="name10" class="home__nav-item-name">Admin</span> 
+                </span> 
+                <span id="stt6" class="home__nav-item-title-icon">
+                    <i id="td10_up" class="home__nav-item-title-icon-item home__nav-item-title-icon-item--up fas fa-chevron-up none"></i> 
+                    <i id="td10_down" class="home__nav-item-title-icon-item home__nav-item-title-icon-item--down fas fa-chevron-down"></i>
+                </span>
+            </div>
+            <ul id="td10_son" class="home__nav-son none">
+                <li class="home__nav-son-item">
+                    <a id="addproject" href="{{ route('addproject') }}" class="home__nav-son-item-link">Thêm dự án</a>
+                </li>
+                <li class="home__nav-son-item">
+                    <a id="order" href="{{ route('order') }}" class="home__nav-son-item-link">Danh sách mua hàng</a>
+                </li>
+                <li class="home__nav-son-item">
+                    <a id="setting" href="{{ route('setting') }}" class="home__nav-son-item-link">Cài đặt</a>
+                </li>
+                <li class="home__nav-son-item">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button style="margin: 0 56px;padding: 0 0;background-color: transparent;" class="home__nav-son-item-link">Đăng xuất</button>
+                    </form>
+                </li>
+            </ul>
+        </li>
+    @endif
 </ul>

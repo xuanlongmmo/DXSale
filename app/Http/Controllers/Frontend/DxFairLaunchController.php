@@ -9,11 +9,11 @@ class DxFairLaunchController extends Controller
 {
     public function fairdashboard()
     {
-        return view('frontend.dxlaunch.index');
+        return view('frontend.dxfairlaunch.index');
     }
 
     public function faircreatesale()
     {
-        # code...
+        return view('frontend.dxfairlaunch.create');
     }
 }
