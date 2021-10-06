@@ -131,5 +131,25 @@ class AdminController extends Controller
             return redirect()->back()->withInput()->with('error', 'Lỗi không xác định!');
         }
     }
+
+    public function project()
+    {
+        if (Auth::check()) {
+            $projects = Dxlaunch::orderby('id', 'DESC')->get();
+            return view('admin.project', compact('projects'));
+        }
+
+        return redirect()->route('home');
+    }
+
+    public function deleteproject($id)
+    {
+        $delete = Dxlaunch::find($id);
+        if ($delete) {
+            $delete->delete();
+        }
+
+        return redirect()->route('project');
+    }
     
 }

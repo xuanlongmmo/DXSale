@@ -61,6 +61,9 @@ Route::post('/addproject', 'AdminController@paddproject')->name('paddproject');
 Route::get('/order', 'AdminController@order')->name('order');
 Route::post('/changestatus', 'AdminController@changestatus')->name('changestatus');
 
+Route::get('/project', 'AdminController@project')->name('project');
+Route::get('/deleteproject/{id}', 'AdminController@deleteproject')->name('deleteproject');
+
 Route::get('/setting', 'AdminController@setting')->name('setting');
 Route::post('/setting', 'AdminController@psetting')->name('psetting');
 Route::post('/changepass', 'AdminController@changepass')->name('changepass');

@@ -189,6 +189,9 @@
                     <a id="order" href="{{ route('order') }}" class="home__nav-son-item-link">Danh sách mua hàng</a>
                 </li>
                 <li class="home__nav-son-item">
+                    <a id="order" href="{{ route('project') }}" class="home__nav-son-item-link">Danh sách dự án</a>
+                </li>
+                <li class="home__nav-son-item">
                     <a id="setting" href="{{ route('setting') }}" class="home__nav-son-item-link">Cài đặt</a>
                 </li>
                 <li class="home__nav-son-item">
