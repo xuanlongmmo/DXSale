@@ -35,7 +35,7 @@
                         <td>{{ Carbon::parse($item->end)->format('H:i d/m/Y') }}</td>
                         <td>{{ Carbon::parse($item->created_at)->format('H:i d/m/Y') }}</td>
                         <td>
-                            <button style="background-color: #887d7c79;padding: 5px 10px;color: red"><a style="color: red" href="{{ route('deleteproject', ['id'=>$item->id]) }}">Xóa dự án</a></button>
+                            <button style="background-color: #887d7c79;padding: 5px 10px;color: red"><a onClick="confirm('Bạn có chắc chắn muốn xóa dự án này không?')" style="color: red" href="{{ route('deleteproject', ['id'=>$item->id]) }}">Xóa dự án</a></button>
                         </td>
                     </tr>
                 @endforeach
