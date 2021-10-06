@@ -17,7 +17,7 @@
                 <tr>
                     <th>#</th>
                     <th>Token</th>
-                    <th>Tên tokenn</th>
+                    <th>Tên token</th>
                     <th>Bắt đầu</th>
                     <th>Kết thúc</th>
                     <th>Ngày tạo</th>
