@@ -53,6 +53,10 @@
             $('#table_id').DataTable();
         } );
 
+        function submitdelete() {
+
+        }
+
         autoopen('td10', 'order');
 
         $.ajaxSetup({

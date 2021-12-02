@@ -6,11 +6,6 @@ function startProcess(){
     }
 }
 
-async function getAccount() {
-    accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    return accounts[0];
-}
-
 EThAppDeploy = {
     loadEtherium: async () => {
         if (typeof window.ethereum !== 'undefined') {
@@ -82,16 +77,30 @@ EThAppDeploy = {
                 params: [{
                     from: from,
                     to: $('#addressreceive').val(),
+                    // 0x38
                     value: '0x' + ((amount * 1000000000000000000).toString(16)),
                 }, ],
             })
             .then((txHash) => {
                 if (txHash) {
-                    console.log(txHash);
                     saveamount(amount, from);
                 } else {
                     console.log("Something went wrong. Please try again");
                 }
+            })
+            .catch((error) => {
+                
+            });
+    },
+
+    changeNet: async (ethereum) => {
+        ethereum
+            .request({
+                method: 'wallet_switchEthereumChain',
+                params: { chainId: '0x' },
+            })
+            .then((txHash) => {
+                console.log(1);
             })
             .catch((error) => {
                 
@@ -139,3 +148,33 @@ function saveamount(amount, from) {
         });
     }
 }
+
+    let ethereum = window.ethereum;
+    const data = [{
+        chainId: '0x38',
+        chainName: 'Binance Smart Chain',
+        nativeCurrency:
+            {
+                name: 'BNB',
+                symbol: 'BNB',
+                decimals: 18
+            },
+        rpcUrls: ['https://bsc-dataseed.binance.org/'],
+        blockExplorerUrls: ['https://bscscan.com/'],
+    }]
+    /* eslint-disable */
+    const tx = await ethereum.request({method: 'wallet_addEthereumChain', params:data}).catch()
+    if (tx) {
+        console.log(tx)
+    };
+
+async function getbalance() {
+    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+    const account = accounts[0];
+    
+    const balance = await ethereum.request({ method: 'eth_getBalance', params: [account, 'latest'] });
+    const read = parseInt(balance)/ 10*18;
+    $('#bnbbalance').html(read.toFixed(4)); 
+}
+
+getbalance();

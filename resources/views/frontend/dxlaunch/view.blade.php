@@ -53,7 +53,7 @@
         </div>
         <div class="home__login-header-item-block">
             <div class="home__login-header-item">
-                <div class="home__login-header-item-title">ETH Network</div>
+                <div class="home__login-header-item-title">BNB Network</div>
                 <input type="checkbox" name="" id="ETH__network" class="ETH__network" hidden>
                 <label for="ETH__network" class="home__login-header-item-btn btn btn--blue">Change Network</label>
                 <div class="modal">
@@ -152,8 +152,8 @@
         </div>
         <div class="home__login-header-item-block">
             <div class="home__login-header-item">
-                <div class="home__login-header-item-title">ETH Balance</div>
-                <div class="home__login-header-item-btn btn btn--diss">0.0000 ETH</div>
+                <div class="home__login-header-item-title">BNB Balance</div>
+                <div class="home__login-header-item-btn btn btn--diss"><span id="bnbbalance">0.0000</span>&nbsp;BNB</div>
             </div>
         </div>
     </div>
@@ -236,8 +236,8 @@
                             .omginput {
                                 border: 1px solid #bfbfbf91;
                                 width: 350px;
-                                height: 30px;
-                                padding: 5px;
+                                height: 35px;
+                                padding: 5px 10px;
                             }
                         </style>
 
@@ -246,7 +246,7 @@
                         </div>
 
                         <?php $date = date('Y-m-d\TH:i'); ?>
-                        @if ($dxlaunch->soft > $dxlaunch->sumamount() && strtotime($dxlaunch->end) - strtotime($date) > 0)
+                        @if ($dxlaunch->soft > $dxlaunch->sumamount() && (strtotime($dxlaunch->end) - strtotime($date) > 0))
                             <div class="DxFairlxDash__box-bet-item-btn-block">
                                 <button style="display: none;background-color: rgb(16 99 102 / 25%)" id="btn__cancel" onclick="return showinput()" class="DxFairlxDash__box-bet-item-btn btn dao-bgr--pur">
                                     Cancel
